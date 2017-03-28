@@ -18,6 +18,8 @@ class TodoInput extends React.Component {
       }}
       >
         <input
+          type="text"
+          placeholder="Add a to-do..."
           value={this.state.input}
           onChange={(event) => this.setState({ name: event.target.value })}>
         </input>
