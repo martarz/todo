@@ -8,10 +8,11 @@ body {
 }
 
 div.App.container {
-  padding-top: 250px;
+  padding-top: 150px;
   text-align: center;
 }
 
 h2, th {
   color: ghostwhite;
+  text-align: center;
 }
