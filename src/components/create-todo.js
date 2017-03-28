@@ -6,24 +6,22 @@ class CreateTodo extends Component {
   render() {
     return (
       <Grid>
-        <form onSubmit={(event) => {
-          event.preventDefault()
-          this.props.add(this.state.input)
-        }}
-        >
+        <form onSubmit={this.handleCreate.bind(this)}>
         <input
           className="new-todo"
           placeholder="Add a to-do"
-/*          value={this.state.newTodo}
-          onKeyDown={this.handleNewTodoKeyDown}
-          onChange={this.handleChange}
-          autoFocus={true}*/
+          ref="createInput"
         />
         <button>+</button>
         </form>
       </Grid>
     );
   }
+handleCreate(event) {
+    event.preventDefault();
+    this.props.createTask(this.refs.createInput.value);
+}
+
 }
 
 export default CreateTodo;

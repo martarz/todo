@@ -36,16 +36,29 @@ class App extends Component {
       todos
     }
   }
+
   render() {
     return (
       <Grid className="App">
         <div>
           <h2>React ToDos App</h2>
         </div>
-        <CreateTodo/>
-        <TodosList todos={this.state.todos}/>
+        <CreateTodo
+          createTask={this.createTask.bind(this)}
+        />
+        <TodosList
+          todos={this.state.todos}
+        />
       </Grid>
     );
+  }
+
+  createTask(task) {
+    this.state.todos.push({
+      task,
+      isCompleted: false
+    });
+    this.setState({todos: this.state.todos})
   }
 }
 
