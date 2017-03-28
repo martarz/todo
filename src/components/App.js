@@ -51,7 +51,7 @@ class App extends Component {
           todos={this.state.todos}
           toggleTask={this.toggleTask.bind(this)}
           saveTask={this.saveTask.bind(this)}
-          deteleTask={this.deleteTask.bind(this)}
+          deleteTask={this.deleteTask.bind(this)}
         />
       </Grid>
     );

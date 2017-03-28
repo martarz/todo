@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Grid, Table} from 'react-bootstrap';
+import {Grid} from 'react-bootstrap';
 
 class CreateTodo extends Component {
 

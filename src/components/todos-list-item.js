@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Grid} from 'react-bootstrap';
+
 
 class TodosListItem extends Component {
   constructor(props){
@@ -44,7 +44,7 @@ renderTaskSection () {
     if (this.state.isEditing){
       return (
         <td>
-        <button onClick ={this.onSaveClick.bind(this)}>Save</button>
+        <button onClick={this.onSaveClick.bind(this)}>Save</button>
         <button onClick={this.onCancelClick.bind(this)}>Cancel</button>
         </td>
       );
@@ -52,7 +52,7 @@ renderTaskSection () {
       return (
         <td>
           <button onClick={this.onEditClick.bind(this)}>Edit</button>
-          <button onClick={this.deleteTask.bind(this, this.props.task)}>Delete</button>
+          <button onClick={this.props.deleteTask.bind(this, this.props.task)}>Delete</button>
         </td>
       );
   }
@@ -77,7 +77,7 @@ renderTaskSection () {
     const oldTask = this.props.task;
     const newTask = this.refs.editInput.value;
     this.props.saveTask(oldTask, newTask);
-    this.setState({ isEditing: false})
+    this.setState({ isEditing: false});
   }
 }
 
