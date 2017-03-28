@@ -45,6 +45,7 @@ class App extends Component {
           <h2>React ToDos App</h2>
         </div>
         <CreateTodo
+          todos={this.state.todos}
           createTask={this.createTask.bind(this)}
         />
         <TodosList
