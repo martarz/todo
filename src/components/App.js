@@ -8,7 +8,7 @@ import './App.css';
 
 const todos = [
   {
-    task: 'make ToDo list',
+    task: 'make a ToDo list',
     isCompleted: false
   },
   {

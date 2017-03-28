@@ -6,3 +6,12 @@ body {
   height: 100vh;
   color: black;
 }
+
+div.App.container {
+  padding-top: 250px;
+  text-align: center;
+}
+
+h2, th {
+  color: ghostwhite;
+}
