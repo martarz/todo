@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Grid} from 'react-bootstrap';
-import TodosInput from './input'
+/*import TodosInput from './input'*/
 import TodosList from './todos-list'
 import CreateTodo from './create-todo'
 import './App.css';
@@ -13,7 +13,20 @@ const todos = [
   {
     task: 'go for a walk',
     isCompleted: true
+  },
+  {
+    task: 'clean the windows',
+    isCompleted: false
+  },
+  {
+    task: 'make dinner',
+    isCompleted: true
+  },
+  {
+    task: 'go to the gym',
+    isCompleted: true
   }
+
 ]
 
 class App extends Component {
@@ -29,7 +42,6 @@ class App extends Component {
         <div>
           <h2>React ToDos App</h2>
         </div>
-        <TodosInput/>
         <CreateTodo/>
         <TodosList todos={this.state.todos}/>
       </Grid>

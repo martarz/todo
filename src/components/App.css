@@ -1,18 +1,12 @@
 body {
-
+  margin-top: 20px;
   background: url("background.jpg")  no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
+  color: ghostwhite;
 }
 
-.App {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
+button {
+  color: black;
 }
- h2 {
-   color: ghostwhite;
- }
-
-

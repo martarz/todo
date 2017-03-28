@@ -14,10 +14,10 @@ class CreateTodo extends Component {
         <input
           className="new-todo"
           placeholder="Add a to-do"
-          value={this.state.newTodo}
+/*          value={this.state.newTodo}
           onKeyDown={this.handleNewTodoKeyDown}
           onChange={this.handleChange}
-          autoFocus={true}
+          autoFocus={true}*/
         />
         <button>+</button>
         </form>

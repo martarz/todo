@@ -4,7 +4,6 @@ import {Grid} from 'react-bootstrap';
 class TodosListItem extends Component {
   render() {
     return (
-      <Grid>
         <tr>
           <td>{this.props.task}</td>
           <td>
@@ -12,7 +11,6 @@ class TodosListItem extends Component {
             <button>Delete</button>
           </td>
         </tr>
-      </Grid>
     );
   }
 }
