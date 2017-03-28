@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {Grid} from 'react-bootstrap';
-import TodoInput from './input'
-import TodosList from './todo-list'
+import TodosInput from './input'
+import TodosList from './todos-list'
+import CreateTodo from './create-todo'
 import './App.css';
 
 const todos = [
@@ -28,7 +29,8 @@ class App extends Component {
         <div>
           <h2>React ToDos App</h2>
         </div>
-        <TodoInput/>
+        <TodosInput/>
+        <CreateTodo/>
         <TodosList todos={this.state.todos}/>
       </Grid>
     );

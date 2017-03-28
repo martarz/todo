@@ -2,7 +2,7 @@ import React from 'react'
 import {form, input} from 'react-bootstrap'
 
 
-class TodoInput extends React.Component {
+class TodosInput extends React.Component {
   constructor(props) {
     super(props)
 
@@ -31,6 +31,6 @@ class TodoInput extends React.Component {
     )
   }
 }
-export default TodoInput
+export default TodosInput
 
 

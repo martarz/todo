@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Grid} from 'react-bootstrap';
 
-class TodoListHeader extends Component {
+class TodosListHeader extends Component {
   render() {
     return (
       <Grid>
@@ -16,4 +16,4 @@ class TodoListHeader extends Component {
   }
 }
 
-export default TodoListHeader;
+export default TodosListHeader;
