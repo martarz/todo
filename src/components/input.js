@@ -14,16 +14,19 @@ class TodoInput extends React.Component {
     return (
       <form onSubmit={(event) => {
         event.preventDefault()
-        this.props.save(this.state.input)
+        this.props.add(this.state.input)
       }}
       >
         <input
-          type="text"
-          placeholder="Add a to-do..."
-          value={this.state.input}
-          onChange={(event) => this.setState({ name: event.target.value })}>
+          className="new-todo"
+          placeholder="Add a to-do"
+          value={this.state.newTodo}
+          onKeyDown={this.handleNewTodoKeyDown}
+          onChange={this.handleChange}
+          autoFocus={true}
+        >
         </input>
-        <button>Save</button>
+        <button>+</button>
       </form>
     )
   }
