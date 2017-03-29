@@ -3,7 +3,7 @@ import {Grid, Pager} from 'react-bootstrap';
 import _ from 'lodash';
 import TodosList from './todos-list'
 import CreateTodo from './create-todo'
-import './App.css';
+import './css/App.css';
 
 const todos = [
   {
