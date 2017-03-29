@@ -16,3 +16,6 @@ h2, th {
   color: ghostwhite;
   text-align: center;
 }
+.table-wrap {
+  border: 10px solid black;
+}

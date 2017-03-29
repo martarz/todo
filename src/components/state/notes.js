@@ -1,19 +1,22 @@
-export const FETCH__BEGIN = 'user/FETCH__BEGIN'
-export const FETCH__SUCCESS = 'user/FETCH__SUCCESS'
-export const FETCH__FAIL = 'user/FETCH__FAILED'
+const FETCH__BEGIN = 'notes/FETCH__BEGIN'
+const FETCH__SUCCESS = 'notes/FETCH__SUCCESS'
+const FETCH__FAIL = 'notes/FETCH__FAILED'
 
-export const fetchNote = (accessToken, userId, injectedFetch = fetch) => (dispatch) => {
+
+export const fetchNotes = () => dispatch => {
   dispatch({ type: FETCH__BEGIN })
-  return injectedFetch(
-    Api.url + '/users/' + userId + '?access_token=' + accessToken
+  return fetch(
+    process.env.PUBLIC_URL + '/data/notes.json'
   ).then(
     response => {
       if (response.ok) {
         return response.json().then(
-          data => dispatch({
-            type: FETCH__SUCCESS,
-            data
-          })
+          data => {
+            dispatch({
+              type: FETCH__SUCCESS,
+              data
+            })
+          }
         ).catch(
           error => dispatch({
             type: FETCH__FAIL,
@@ -32,9 +35,7 @@ export const fetchNote = (accessToken, userId, injectedFetch = fetch) => (dispat
 }
 
 const initialState = {
-  data: null,
-  fetching: false,
-  error: null
+  items: []
 }
 
 export default (state = initialState, action = {}) => {
@@ -56,11 +57,6 @@ export default (state = initialState, action = {}) => {
         ...state,
         fetching: false,
         error: action.error
-      }
-    case LOGOUT:
-      return {
-        ...state,
-        data: initialState.data
       }
     default:
       return state

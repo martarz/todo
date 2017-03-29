@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Checkbox} from 'react-bootstrap';
+
 
 class TodosListItem extends Component {
   constructor(props){

@@ -1,16 +1,20 @@
 [
   {
-  "id": 1,
-  "title": "First title",
-  "description": "First todossssss",
-  "creationDate": "10/01/17",
-  "doneDate": "11/01/17"
-},
-{
-  "id": 2,
-  "title": "Second title",
-  "description": "Second todossssss",
-  "creationDate": "20/08/17",
-  "doneDate": "22/08/17"
-}
+    "id": 1,
+    "title": "First title",
+    "description": "First todossssss",
+    "creationDate": "10/01/17",
+    "doneDate": "11/01/17",
+    "task": "make a ToDo list",
+    "isCompleted": true
+  },
+  {
+    "id": 2,
+    "title": "Second title",
+    "description": "Second todossssss",
+    "creationDate": "20/08/17",
+    "doneDate": "22/08/17",
+    "task": "make a ToDo list",
+    "isCompleted": false
+  }
 ]
