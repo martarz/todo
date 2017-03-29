@@ -6,6 +6,7 @@ class TodosListHeader extends Component {
     return (
         <thead>
         <tr>
+          <th>Checkbox</th>
           <th>Task</th>
           <th>Actions</th>
         </tr>

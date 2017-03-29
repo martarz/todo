@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import React, {Component} from 'react';
-import {Grid, Table} from 'react-bootstrap';
+import {Grid, Table, Checkbox} from 'react-bootstrap';
 import TodosListHeader from './todos-list-header'
 import TodosListItem from './todos-list-item'
 

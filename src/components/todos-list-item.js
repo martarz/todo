@@ -21,10 +21,12 @@ renderTaskSection () {
 
     };
 
+
     if (this.state.isEditing) {
       return (
+
         <td>
-          <Checkbox inline>1</Checkbox>
+
           <form onSubmit={this.onSaveClick.bind(this)}>
             <input type="text" defaultValue={task}
             ref="editInput"/>
@@ -34,9 +36,10 @@ renderTaskSection () {
     }
 
     return (
+
       <td style={taskStyle}
-          onClick={this.props.toggleTask.bind(this, task)}
-      ><Checkbox inline></Checkbox>
+          onClick={this.props.toggleTask.bind(this, task)}>
+
           {task}
       </td>
     );
