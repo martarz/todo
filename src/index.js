@@ -1,13 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Router, Route, browserHistory } from 'react-router'
+import { Provider } from 'react-redux'
+import store from './store'
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
 
-import App from './components/App';
-import './components/css/index.css';
+import App from './components/app'
+import TasksView from './components/tasks-view'
+
 
 ReactDOM.render(
-  <App />,
+  (
+    <Provider store={store}>
+      <Router history={browserHistory}>
+        <Route path="/" component={App}>
+        </Route>
+      </Router>
+    </Provider>
+  ),
   document.getElementById('root')
 );
