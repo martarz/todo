@@ -16,10 +16,13 @@ renderItems() {
     return (
       <Grid>
         <Table>
+
           <TodosListHeader/>
           <tbody>
+
             {this.renderItems()}
           </tbody>
+
         </Table>
       </Grid>
     );

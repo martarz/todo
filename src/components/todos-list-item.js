@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import {Checkbox} from 'react-bootstrap';
 
 class TodosListItem extends Component {
   constructor(props){
@@ -24,6 +24,7 @@ renderTaskSection () {
     if (this.state.isEditing) {
       return (
         <td>
+          <Checkbox inline>1</Checkbox>
           <form onSubmit={this.onSaveClick.bind(this)}>
             <input type="text" defaultValue={task}
             ref="editInput"/>
@@ -35,7 +36,7 @@ renderTaskSection () {
     return (
       <td style={taskStyle}
           onClick={this.props.toggleTask.bind(this, task)}
-      >
+      ><Checkbox inline></Checkbox>
           {task}
       </td>
     );
@@ -44,6 +45,7 @@ renderTaskSection () {
     if (this.state.isEditing){
       return (
         <td>
+
         <button onClick={this.onSaveClick.bind(this)}>Save</button>
         <button onClick={this.onCancelClick.bind(this)}>Cancel</button>
         </td>

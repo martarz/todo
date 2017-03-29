@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import {Grid} from 'react-bootstrap';
+import {Grid, Pager} from 'react-bootstrap';
 import _ from 'lodash';
-/*import TodosInput from './input'*/
 import TodosList from './todos-list'
 import CreateTodo from './create-todo'
 import './App.css';
@@ -48,12 +47,19 @@ class App extends Component {
           todos={this.state.todos}
           createTask={this.createTask.bind(this)}
         />
+
         <TodosList
+
           todos={this.state.todos}
           toggleTask={this.toggleTask.bind(this)}
           saveTask={this.saveTask.bind(this)}
           deleteTask={this.deleteTask.bind(this)}
         />
+        <Pager>
+          <Pager.Item href="#">Previous</Pager.Item>
+          {' '}
+          <Pager.Item href="#">Next</Pager.Item>
+        </Pager>
       </Grid>
     );
   }
